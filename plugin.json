@@ -1,0 +1,37 @@
+{
+    "name": "TARGOBANK",
+    "namespace": "TARGOBANK",
+    "type": "payment",
+    "version": "1.0.6",
+    "license": "AGPL-3.0",
+    "pluginIcon": "icon_plugin_xs.png",
+    "price": 0.00,
+    "description": "The official TARGOBANK plugin for plentymarkets",
+    "shortDescription":{ "de":"Das offizielle, von plentymarkets entwickelte TARGOBANK-Plugin für den Webshop Ceres und andere Template-Plugins.", "en":"The official TARGOBANK plugin developed by plentymarkets for the online store Ceres and other template plugins."},
+    "categories":["3519"],
+    "keywords": ["targobank", "official", "plentymarkets", "payment"],
+    "author": "plentymarkets GmbH",
+    "authorIcon": "icon_author_xs.png",
+    "serviceProvider": "TARGOBANK\\Providers\\TARGOBANKServiceProvider",
+    "containers": [],
+    "javaScriptFiles": [],
+    "require": [],
+    "dependencies":{
+        "targobank/rest-api-sdk-php":"*"
+    },
+    "runOnBuild": [
+        "TARGOBANK\\Migrations\\CreatePaymentMethod",
+        "TARGOBANK\\Migrations\\CreateTARGOBANKTables"
+    ],
+    "dataProviders": [
+        {"key":"TARGOBANK\\Providers\\DataProvider\\TARGOBANKScriptsDataProvider", "name":"TARGOBANK Scripts", "description": "Different Scripts for the TARGOBANK Payment Methods"},
+        {"key":"TARGOBANK\\Providers\\DataProvider\\TARGOBANKExpressButtonDataProvider", "name":"TARGOBANK Express Button", "description": "TARGOBANK Express Button"},
+        {"key":"TARGOBANK\\Providers\\DataProvider\\TARGOBANKPlusPaymentWallDataProvider", "name":"TARGOBANK Plus Wall", "description": "To Show the TARGOBANK Plus Wall"},
+
+        {"key":"TARGOBANK\\Providers\\DataProvider\\Installment\\TARGOBANKInstallmentGenericPromotion", "name":"TARGOBANK Installment Generic Promotion", "description": "TARGOBANK Installment Generic Promotion"},
+        {"key":"TARGOBANK\\Providers\\DataProvider\\Installment\\TARGOBANKInstallmentSpecificPromotion", "name":"TARGOBANK Installment Specific Promotion", "description": "TARGOBANK Installment Specific Promotion"},
+        {"key":"TARGOBANK\\Providers\\DataProvider\\Installment\\TARGOBANKInstallmentFinancingCheck", "name":"TARGOBANK Installment Financing Check", "description": "Display the TARGOBANK Installment Financing Check"},
+        {"key":"TARGOBANK\\Providers\\DataProvider\\Installment\\TARGOBANKInstallmentFinancingCosts", "name":"TARGOBANK Installment Financing Costs", "description": "Display the TARGOBANK Installment Financing Costs"},
+        {"key":"TARGOBANK\\Providers\\DataProvider\\Installment\\TARGOBANKInstallmentPrepareButton", "name":"TARGOBANK Installment Prepare Button", "description": "Display the TARGOBANK Installment Prepare Button"}
+    ]
+}

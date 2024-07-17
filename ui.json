@@ -1,0 +1,24 @@
+{
+  "defaultEntryPoint": "index.html",
+  "namespace": "PlentyTARGOBANK",
+  "menuEntries": [
+    {
+      "label": "Kontoeinstellungen",
+      "menu": "settings/orders/targobank",
+      "urlKey": "accounts",
+      "entryPoint": "index.html?action=permissions"
+    },
+    {
+      "label": "TARGOBANK / TARGOBANK Plus",
+      "menu": "settings/orders/targobank",
+      "urlKey": "settings-targobank",
+      "entryPoint": "index.html?action=settings_targobank"
+    },
+    {
+      "label": "Ratenzahlung Powered by TARGOBANK",
+      "menu": "settings/orders/targobank",
+      "urlKey": "settings-targobank-installment",
+      "entryPoint": "index.html?action=settings_targobank_installment"
+    }
+  ]
+}
